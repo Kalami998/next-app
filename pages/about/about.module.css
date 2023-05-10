@@ -1,0 +1,14 @@
+.ab {
+    position: relative;
+    padding: 12px;
+    width: 100%;
+
+}
+
+.ab__title {
+    width: 100%;
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
