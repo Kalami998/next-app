@@ -3,20 +3,39 @@
 
 //  通过 [name].module.css 文件命名约定来支持 CSS 模块 。
 import styles from "./about.module.css";
+
+import { useState } from "react";
+
 // 在 export default 前处理
 export async function getStaticProps(props) {
-  console.log("获取方法", props);
-  return {
-    props: {
-      title: "about",
-    },
-  };
+	console.log("获取方法", props);
+	return {
+		props: {
+			title: "about",
+			curValue: 12,
+		},
+	};
 }
-export default function aboutPage(context) {
-  console.log("上下文", context);
-  return (
-    <div class={styles.ab}>
-      <div class={styles.ab__title}>Hello Word!</div>
-    </div>
-  );
+
+export default function aboutPage(that) {
+	let [value, setValue] = useState(12);
+
+	console.log("上下文", that);
+
+	function handleValue(e) {
+		console.log("点击了", e);
+		setValue(value + 1);
+	}
+
+	return (
+		<div className={styles.ab}>
+			<div className={styles.ab__title}>num value: {value}</div>
+			<div className={styles.ab__btn} onClick={handleValue}>
+				+
+			</div>
+			<div className={styles.ab__btn} onClick={handleValue}>
+				-
+			</div>
+		</div>
+	);
 }
