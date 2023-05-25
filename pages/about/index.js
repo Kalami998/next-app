@@ -17,6 +17,7 @@ export async function getStaticProps(props) {
 	};
 }
 
+// functionName 要大写如这里的 AboutPage
 export default function AboutPage(that) {
 	let [value, setValue] = useState(12);
 

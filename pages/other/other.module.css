@@ -1,0 +1,24 @@
+.ab {
+    position: relative;
+    padding: 12px;
+    width: 100%;
+
+}
+
+.ab__title {
+    width: 100%;
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+
+.ab__btn {
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #8f8a8a;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
